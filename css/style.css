@@ -1,0 +1,796 @@
+/* 
+-----------------------------------------------------
+  Stylesheet Guide
+-----------------------------------------------------
+  
+  1. Default stylesheets
+    1.1. Color Schemes
+  2. General classes
+  3. Main
+    2.1 Page tilte end breadcrumps
+    2.2 Offsets
+  4. Header
+    4.1. Main navigation
+    4.2. Search
+  5. Basic Elements
+    5.1. Typography
+    5.2. Lists
+    5.3. Buttons
+    5.4. Dividers
+    5.5. Tooltips
+    5.6. Tables
+    5.7. Forms
+  6. Widgets and Shortcodes
+    6.1. Icon Boxes
+    6.2. Skills
+      6.2.1. Skills circle
+      6.2.2. Skillbar
+    6.3. Message Box
+    6.2. Accordion and Toggles
+    6.3. Alert Boxes
+    6.4. Progress Bars
+    6.5. Team Members
+    6.6. Counters
+    6.7. Tabs and Tour Sections
+    6.8. Before/After
+    6.9. Pricing Tables
+    6.10. Countdown
+  7. Isotope
+  8. Sliders
+  9. Lightboxes
+  10. Carousels
+  11. Main
+  12. Portfolio & Gallery
+    12.1. Portfolio Single item
+    12.2. Related Portfolio Projects
+    12.3. Gallery Albums
+    12.4. Gallery Flow
+    12.5. Protected Gallery
+    12.6. Gallery wall items
+  13. Blog
+  14. Shop
+  15. Animations
+  16. Footer
+    16.1. Footer Bottom
+    16.2. Copyright
+*/
+@import "reset.css";
+
+@import '../fonts/Lato_semibold/fonts.css';
+@import '../fonts/Lato_black_bold/fonts.css';
+
+/* ------------------------------------------------
+
+    1. Default stylesheets
+
+------------------------------------------------ */
+
+    body {
+        font-family: 'latosemibold_italic', sans-serif;
+        color:#505050;
+        font-size:16px;
+        line-height:20px;
+        background:#cfcec7;
+    }
+
+    *{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .container{
+        width: 902px;
+        margin: 0 auto;
+    }
+
+    ::selection{
+        color: #fff;
+        background: #22cfef;
+    }
+
+    ::-moz-selection{
+        color: #fff;
+    }
+
+    ::-moz-selection{background: #22cfef;}
+
+    ::-webkit-scrollbar{
+        background: #cdcdcd;  
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb{background: #484e4e;}
+
+
+    ::-webkit-input-placeholder{
+        color:#969696;
+
+        -webkit-transition: text-indent .5s ease, color .5s ease;
+        transition: text-indent .5s ease, color .5s ease;
+    }
+
+    input::-moz-placeholder{
+        color:#969696;
+        opacity:1;
+    }
+
+    textarea::-moz-placeholder{
+        color: #969696;
+        opacity: 1;
+    }
+
+    ::ms-input-placeholder{
+        color:#969696;
+    }
+
+    [placeholder]:focus::-webkit-input-placeholder{
+        text-indent:10em;
+        color:transparent;
+    }
+
+
+   /* --------------------------------------------
+        1.1. Color Schemes
+   -------------------------------------------- */
+        
+
+/* ------------------------------------------------
+
+    2. General Classes
+
+------------------------------------------------ */
+
+   .align_left{
+    text-align: left;
+   }
+
+   .align_right{
+    text-align: right;
+   }
+
+   .align_center{
+    text-align: center;
+   }
+
+   .alignleft{
+    float: left;
+   }
+
+   .alignright{
+    float: right;
+   }
+
+   .wrapper{overflow: hidden;}
+
+   .hide{ display: none;}
+
+   .show{ display: block;}
+
+   .d_ib{display: inline-block;}
+
+   .transparent{ opacity:0; }
+
+   .invisible{ 
+    opacity: 0;
+    visibility: hidden;
+   }
+
+   .visible{ 
+    opacity:1; 
+    visibility: visible;
+   }
+
+   .p_abs{position: absolute;}
+
+   .p_rel{position: relative;}
+
+   .p_fix{position: fixed;}
+
+   .clear {clear:both;width:100%;line-height:0;font-size:0;}
+
+   .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+   }
+
+   .reg {text-transform:uppercase}
+
+/* ------------------------------------------------
+
+    3. Main
+
+------------------------------------------------ */
+
+    #content{padding:80px 0px 40px 0px;}
+
+    #content:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        margin-left: -5px;
+    }
+
+    #content_inner{
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+  /* --------------------------------------------
+        3.1. Offsets
+  -------------------------------------------- */
+        
+        .mb37:not(:last-child){
+            margin-bottom: 37px;
+        }
+
+
+/* ------------------------------------------------
+
+    4. Basic Elements
+
+------------------------------------------------ */
+    
+    /* --------------------------------------------
+        4.1. Typography
+    -------------------------------------------- */
+
+        .medium{
+            font-family: 'latomedium_italic', sans-serif;
+            font-weight: normal;
+        }
+  
+        h1,h2,h3,h4,h5,h6{
+            font-family: 'latoblack', sans-serif;
+            font-weight:normal;
+            line-height: 1.23em;
+            color: #505050;
+            margin: 0;
+            margin-bottom: 37px;
+        }
+
+        h1{
+            font-size: 44px; 
+            line-height: 52px;
+            letter-spacing: 1.4px;
+        }
+        
+        h2{
+            font-size: 34px; 
+            line-height: 40px; 
+            letter-spacing: 1.1px;
+            margin-bottom: 21px;
+        }
+
+        h3{font-size: 22px;}
+        h4{font-size: 18px;}
+        h5{font-size: 16px;}
+        h6{font-size: 14px;}
+
+        p:not(:last-child){margin-bottom: 20px;}
+
+        mark{background-color: #20cfef;padding: 0 2px;color: #fff;}
+        mark.red{background-color: #ee352f;}
+
+        a{
+            color: #2991af;
+            text-decoration: none;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        a:hover{
+            color: #505050;
+            text-decoration: none;
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        a:focus,
+        a:visited{
+            text-decoration: none;
+        }
+
+        .link_type2{
+            color: #505050;
+            text-decoration: underline;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.4px;
+        }
+
+        .link_type2:hover{
+            text-decoration: none;
+        }
+
+    /* --------------------------------------------
+        4.2. Lists
+    -------------------------------------------- */
+
+        .list1{}
+        .list1_item{
+            background:url(../images/marker1.png) 0 7px no-repeat;
+            padding-left:20px;
+        }
+        .list1_link{}
+
+        .list2{}
+        .list2_item{
+            background:url(../images/marker1.png) 0 7px no-repeat;
+            padding-left:20px;
+        }
+        .list2_link{}
+
+        .list3{}
+        .list3_item{
+            background:url(../images/marker1.png) 0 7px no-repeat;
+            padding-left:20px;
+        }
+        .list3_link{}
+
+
+    /* --------------------------------------------
+        4.3. Buttons
+    -------------------------------------------- */
+
+        button{
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        button:hover{
+            -webkit-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .btn{
+            display: inline-block;
+            outline: none;
+            background: #cc1c00;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            font: 16px/20px 'latoblack', sans-serif;
+            letter-spacing: 1.4px;
+            padding: 20px 0;
+            -webkit-box-shadow: 0 3px 0 #b50f0f;
+            box-shadow: 0 3px 0 #b50f0f;
+            width: 327px;
+            border-radius: 6px;
+        }
+
+        .btn:hover{
+            background-color: #b50f0f;
+            color: #fff;
+        }
+
+/* ------------------------------------------------
+
+    5. Header
+
+------------------------------------------------ */
+   
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 0 0;
+    }
+
+    .logo_box{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .logo,.logo2{
+        display: table-cell;
+        width: 50%;
+        vertical-align: middle;
+    }
+
+    .logo a{
+        display:inline-block;
+        width:195px;
+        height:47px;
+        background:url(../images/logo.svg) 0 50% no-repeat;
+        text-decoration:none;
+        text-indent:-9999px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .logo2{
+        text-align: right;
+    }
+
+    .logo2 a{
+        text-align: left;
+        display:inline-block;
+        width:134px;
+        height:31px;
+        background:url(../images/SWISS_rgb.png) 0 50% no-repeat;
+        text-decoration:none;
+        text-indent:-9999px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+
+  
+/* ------------------------------------------------
+
+    6. First Screen
+
+------------------------------------------------ */
+    
+    .first_screen{
+        text-align: center;
+    }
+
+    .first_screen p{
+        padding: 0 180px;
+        margin-bottom: 41px;
+    }
+
+  
+/* ------------------------------------------------
+
+    7. Modal Windows
+
+------------------------------------------------ */
+
+    .modal_box{
+        background-color: #fff;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 0 #535353;
+        box-shadow: 0 3px 0 #535353;
+        position: relative;
+    }
+
+    .modal_close{
+        position: absolute;
+        z-index: 99;
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+        top: 21px;
+        right: 21px;
+    }
+
+    .modal_close img{
+        width: 100%;
+        -webkit-transition: all 0.8s;
+        -o-transition: all 0.8s;
+        transition: all 0.8s;
+    }
+
+    .modal_close:hover img{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    
+    #terms_conditions{
+        width: 620px;
+    }
+
+    .terms_conditions_section:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    .terms_conditions_title{
+        font: normal 16px/20px 'latosemibold_italic', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .custom_scrollbar{
+        max-height: inherit;
+        padding: 40px 60px;
+    }
+
+    /*Get Tickets*/
+
+    #get_tickets{
+        width: 507px;
+        padding: 39px 35px 40px 32px;
+    }
+
+    .get_tickets_list li{
+        display: block;
+        font: 24px/25px 'latobold', sans-serif;
+        color: #535353;
+        letter-spacing: 0.2px;
+        margin-bottom: 13px;
+        opacity: 0.6;
+        position: relative;
+    }
+
+    .get_tickets_list li span{
+        display: inline-block;
+    }
+
+    .get_tickets_list li.current{
+        opacity: 1;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .get_tickets_list li:before{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        overflow: hidden;
+        color: #00b0dd;
+        white-space: nowrap;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .get_tickets_list li:after{
+        content: '';
+        display: inline-block;
+        width: 0px;
+        height: 25px;
+        background: url(../images/galochka_.svg) 0 50% no-repeat;
+        margin-left: 18px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    .get_tickets_list li.done:after{
+        -webkit-transition-delay: 0.5s;
+        -o-transition-delay: 0.5s;
+        transition-delay: 0.5s;
+        width: 19px;
+    }
+
+    .get_tickets_list li.done:before{
+        width: 100%;
+    }
+
+    [class*='step_']{
+        display: none;
+        opacity: 0;
+    }
+
+    .current[class*='step_']{
+        display: block;
+        opacity: 1;
+    }
+
+    /*step 1*/
+
+    .input_box{
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    .input_box input{
+        width: 100%;
+        background-color: #f5f5f5;
+        border-radius: 6px;
+        outline: none;
+        padding: 19px 55px 19px 19px;
+        border: 1px solid #f5f5f5;
+        font: 16px/20px 'latoblack',sans-serif;
+    }
+
+    .input_box input.invalid{
+        border: 1px solid #cc1c00;
+    }
+
+    .input_box input.valid{
+        border: 1px solid #b1d975;
+    }
+
+    .subscribe_btn{
+        display: block;
+        outline: none;
+        border: none;
+        background: none;
+        position: absolute;
+        top: 15px;
+        padding: 5px 10px;
+        right: 21px;
+        letter-spacing: 1.4px;
+        cursor: pointer;
+        font: 16px/20px 'latoblack',sans-serif;
+    }
+
+    .subscribe_btn:hover{
+        opacity: 0.7;
+    }
+
+    .input_box span{
+        position: absolute;
+        right: 0;
+        bottom: -32px;
+        font-family: 'latomedium_italic',sans-serif;
+    }
+
+    /*step 2*/
+    
+    .social_list{
+        margin-left: -25px;
+        margin-bottom: 20px;
+    }
+
+    .social_list li{
+        float: left;
+        padding-left: 25px;
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .social_list li a{
+        display: block;
+        font: 16px/20px 'latoblack',sans-serif;
+        color: #fff;
+        border-radius: 6px;
+        padding: 20px 0;
+    }
+
+    .social_list li a.fb{background-color: #3b579e;}
+    .social_list li a.fb:hover{background-color: #415fab;}
+
+    .social_list li a.vk{background-color: #4c75a3;}
+    .social_list li a.vk:hover{background-color: #537fb0;}
+
+    .social_list li a.tw{background-color: #60a9de;}
+    .social_list li a.tw:hover{background-color: #66b2ea;}
+
+    .next_step{
+        font: 16px/20px 'latoblack', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: #00b0dd;
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .next_step:hover{
+        color: #00b0dd;
+    }
+
+    .next_step.active{
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .next_step.active:hover{
+        color: #505050;
+    }
+    
+    /*step 3*/
+
+    .step_3{
+        text-align: center;
+        padding-top: 30px;
+    }
+/* ------------------------------------------------
+
+    8. Inner page
+
+------------------------------------------------ */
+    
+    #pilot_img{
+        float: left;
+        width: 208px;
+        margin: 0 91px 0 38px;
+    }
+
+    .advice_box{
+        float: left;
+        width: 507px;
+        text-align: center;
+    }
+
+    .advice{
+        background-color: #fff;
+        border-radius: 6px;
+        -webkit-box-shadow: 0 3px 0 #8e7878;
+        box-shadow: 0 3px 0 #8e7878;
+        position: relative;
+        height: 266px;
+        margin-bottom: 23px;
+    }
+
+    .advice_btn_box{
+        position: absolute;
+        z-index: 9;
+        bottom: 28px;
+        left: 0;
+        right: 0;
+    } 
+
+    .advice_btn{
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font: 16px/20px 'latoblack', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: #cc1c00;
+    }
+
+    .advice_btn:hover{
+        color: #23a7cb;
+    }
+    
+    .advice_list{
+        height: inherit;
+    }
+
+    .advice_list:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        height: 100%;
+        margin-left: -5px;
+    }
+
+    .advice_item{
+        display: none;
+        vertical-align: middle;
+        padding: 60px 57px;
+        max-height: 100%;
+        font-family: 'latomedium_italic', sans-serif;
+        opacity: 0;
+    }
+
+    .advice_item.active{
+        display: inline-block;
+        opacity: 1;
+    }
+
+    .win_tickets{
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.4px;
+        margin-bottom: 21px;
+    }
+/* ------------------------------------------------
+
+    16. Footer
+
+------------------------------------------------ */
+
+    #footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    #footer a{
+        color: #505050;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+    }
+
+    #footer a:hover{
+        text-decoration: underline;
+    }
