@@ -588,11 +588,55 @@
         opacity: 1;
     }
 
+    .next_step{
+        font: 16px/20px 'latoblack', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        color: #00b0dd;
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .next_step:hover{
+        color: #00b0dd;
+    }
+
+    .next_step.active{
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .next_step.active:hover{
+        color: #505050;
+    }
+    
+    
+
     /*step 1*/
 
     .input_box{
         position: relative;
-        margin-bottom: 12px;
+        margin-left: -20px;
+    }
+
+    .input_box:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+    .input_box:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .input_half{
+        float: left;
+        width: 50%;
+        padding-left: 20px;
+    }
+
+    .input_whole{
+        padding-left: 20px;
     }
 
     .input_box input{
@@ -600,7 +644,7 @@
         background-color: #f5f5f5;
         border-radius: 6px;
         outline: none;
-        padding: 19px 55px 19px 19px;
+        padding: 17px 55px 18px 19px;
         border: 1px solid #f5f5f5;
         font: 16px/20px 'latoblack',sans-serif;
     }
@@ -611,31 +655,6 @@
 
     .input_box input.valid{
         border: 1px solid #b1d975;
-    }
-
-    .subscribe_btn{
-        display: block;
-        outline: none;
-        border: none;
-        background: none;
-        position: absolute;
-        top: 15px;
-        padding: 5px 10px;
-        right: 21px;
-        letter-spacing: 1.4px;
-        cursor: pointer;
-        font: 16px/20px 'latoblack',sans-serif;
-    }
-
-    .subscribe_btn:hover{
-        opacity: 0.7;
-    }
-
-    .input_box span{
-        position: absolute;
-        right: 0;
-        bottom: -32px;
-        font-family: 'latomedium_italic',sans-serif;
     }
 
     /*step 2*/
@@ -669,28 +688,6 @@
     .social_list li a.tw{background-color: #60a9de;}
     .social_list li a.tw:hover{background-color: #66b2ea;}
 
-    .next_step{
-        font: 16px/20px 'latoblack', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 1.4px;
-        color: #00b0dd;
-        opacity: 0.5;
-        cursor: default;
-    }
-
-    .next_step:hover{
-        color: #00b0dd;
-    }
-
-    .next_step.active{
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .next_step.active:hover{
-        color: #505050;
-    }
-    
     /*step 3*/
 
     .step_3{

@@ -53,6 +53,65 @@
 				End of mCustomScrollbar
 		------------------------------------------------ */
 
+        /* ------------------------------------------------
+                validate
+        ------------------------------------------------ */
+
+            $("#contactForm").validate({
+
+               	rules:{
+
+                    cf_name:{
+                        required: true,
+                    },
+
+                    cf_fname:{
+                        required: true,
+                    },
+
+                    cf_email:{
+                        required: true,
+                        email:true,
+                    },
+               	},
+
+               	messages:{
+
+                    cf_name:{
+                        required: "Это поле обязательно для заполнения",
+                    },
+
+                    cf_fname:{
+                        required: "Это поле обязательно для заполнения",
+                    },
+
+                    cf_email:{
+                        required: "Это поле обязательно для заполнения",
+                        email: "Ваш адрес электронной почты неверен!"
+                    },
+
+               	},
+
+               	submitHandler: function(form) {
+                    
+                    $(form).ajaxSubmit({
+                        type: 'post', 
+                        url:  'php/contact-send.php',
+                        success: function(data) { 
+                        	
+                        	console.log(data);
+
+                        } 
+
+                    });
+                }
+
+            });
+
+        /* ------------------------------------------------
+                End of validate
+        ------------------------------------------------ */
+
 	});
 
 	$(window).load(function(){

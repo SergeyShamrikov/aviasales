@@ -121,10 +121,15 @@
                             <div class="advice">
 
                                 <div class="advice_list">
-                                    
-                                    <div class="advice_item active" data-src='images/pilot1.svg'>
+                                    <!-- 
+                                    <div class="advice_item " data-src='images/pilot1.svg'>
                                         <h6 class="advice_title">№1</h6>
                                         Пока пусто
+                                    </div>
+                                     -->
+                                    <div class="advice_item active" data-src='images/pilot1.svg'>
+                                        <h6 class="advice_title">№1</h6>
+                                        Если решились на покупки, то ищите аутлеты и распродажи. <a href="http://zurichguide.ru/outlet.php">http://zurichguide.ru/outlet.php</a>
                                     </div>
 
                                     <div class="advice_item" data-src='images/pilot2.svg'>
@@ -234,11 +239,6 @@
                                         Чтобы сэкономить на еде, можно покупать продукты в самых дешёвых супермаркетах Migro или COOP и готовить дома.
                                     </div>
 
-                                    <div class="advice_item" data-src='images/pilot1.svg'>
-                                        <h6 class="advice_title">№23</h6>
-                                        Если решились на покупки, то ищите аутлеты и распродажи. <a href="http://zurichguide.ru/outlet.php">http://zurichguide.ru/outlet.php</a>
-                                    </div>
-
 
                                 </div>                                
                                 
@@ -292,22 +292,42 @@
                     
                     <div class="step_1 current">
                         
-                        <form class="subscribe informed">
+                        <form id="contactForm" class="contact_form">
 
-                            <div class="input_box"> 
+                            <div class="input_box">
+                                
+                                <div class="input_half">
+                                    
+                                    <input type="text" placeholder='Имя' required name="cf_name">
 
-                                <input id="email" type="email" placeholder='E-mail' name="subscribe_email">
+                                </div>
 
-                                <button class="subscribe_btn">ОК</button>
-   
-                                <span>или Enter</span>
-                            
+                                <div class="input_half">
+                                    
+                                    <input type="text" placeholder='Фамилия' required name="cf_fname">
+
+                                </div>
+
                             </div>
 
-                            <span id="valid"></span>
-                            
+                            <div class="input_box">
+
+                                <div class="input_whole">
+
+                                    <input id="email" type="email" placeholder='E-mail' required name="cf_email">
+                                
+                                    <span id="valid"></span>
+
+                                </div>
+
+                            </div>
+
                         </form>
-    
+
+                        <div class="align_center">
+                            <a href="javascript:;" class="next_step">ДАЛЕЕ</a>
+                        </div>
+
                     </div><!-- /.staps_1 -->
 
                     <div class="step_2">
@@ -358,6 +378,8 @@
         <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="plugins/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
         <script type="text/javascript" src="plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script type="text/javascript" src="plugins/jquery.validate/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="plugins/jquery.validate/jquery.form.js"></script>
 
         <!-- Theme files
         ============================================ -->
