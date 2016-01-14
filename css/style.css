@@ -519,37 +519,30 @@
         padding: 39px 35px 40px 32px;
     }
 
+    .get_tickets_list:not(:last-child){
+        margin-bottom: 35px;
+    }
+
     .get_tickets_list li{
         display: block;
         font: 24px/25px 'latobold', sans-serif;
         color: #535353;
         letter-spacing: 0.2px;
-        margin-bottom: 13px;
         opacity: 0.6;
         position: relative;
+    }
+
+    .get_tickets_list li:not(:last-child){
+        margin-bottom: 13px;
     }
 
     .get_tickets_list li span{
         display: inline-block;
     }
 
-    .get_tickets_list li.current{
+    .get_tickets_list li.current,
+    .get_tickets_list li.done{
         opacity: 1;
-        -webkit-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
-    }
-
-    .get_tickets_list li:before{
-        content: attr(data-text);
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 0;
-        overflow: hidden;
-        color: #00b0dd;
-        white-space: nowrap;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
@@ -560,7 +553,7 @@
         display: inline-block;
         width: 0px;
         height: 25px;
-        background: url(../images/galochka_.svg) 0 50% no-repeat;
+        background: url(../images/galochka.svg) 0 10px no-repeat;
         margin-left: 18px;
         -webkit-transition: all 0.5s;
         -o-transition: all 0.5s;
@@ -568,14 +561,7 @@
     }
     
     .get_tickets_list li.done:after{
-        -webkit-transition-delay: 0.5s;
-        -o-transition-delay: 0.5s;
-        transition-delay: 0.5s;
         width: 19px;
-    }
-
-    .get_tickets_list li.done:before{
-        width: 100%;
     }
 
     [class*='step_']{
@@ -610,9 +596,13 @@
         color: #505050;
     }
     
-    
+
 
     /*step 1*/
+
+    .contact_form:not(:last-child){
+        margin-bottom: 33px;
+    }
 
     .input_box{
         position: relative;
@@ -649,8 +639,13 @@
         font: 16px/20px 'latoblack',sans-serif;
     }
 
-    .input_box input.invalid{
+    .input_box input.error{
         border: 1px solid #cc1c00;
+    }
+
+    .input_box label.error{
+        font-size: 12px;
+        color: #cc1c00;
     }
 
     .input_box input.valid{
@@ -662,6 +657,10 @@
     .social_list{
         margin-left: -25px;
         margin-bottom: 20px;
+    }
+
+    .social_list:not(:last-child){
+        margin-bottom: 36px;
     }
 
     .social_list li{
@@ -691,8 +690,23 @@
     /*step 3*/
 
     .step_3{
+        position: absolute;
+        top: 39px;
+        bottom: 40px;
+        right: 35px;
+        left: 32px;
+        background-color: #fff;
         text-align: center;
         padding-top: 30px;
+    }
+
+    .ready_img span{
+        display: inline-block;
+        background: #d8d8d8;
+        width: 162px;
+        height: 162px;
+        border-radius: 50%;
+        margin-bottom: 33px;
     }
 /* ------------------------------------------------
 
@@ -710,7 +724,7 @@
     .advice_box{
         float: left;
         width: 507px;
-        padding-top: 80px;
+        padding-top: 35px;
         text-align: center;
     }
 
@@ -763,7 +777,7 @@
     .advice_item{
         display: none;
         vertical-align: middle;
-        padding: 60px 57px;
+        padding: 30px 57px 60px;
         max-height: 100%;
         font-family: 'latomedium_italic', sans-serif;
         opacity: 0;
@@ -782,8 +796,9 @@
     }
 
     .advice_title{
-        margin-bottom: 20px;
         font-size: 16px;
+        letter-spacing: 1.4px;
+        color: #cc1c00;
     }
 /* ------------------------------------------------
 

@@ -9,9 +9,8 @@
 			var self = this;
 
 			self.events.adviceChange();
-			self.contactForm.init();
 			// self.subscribeForm.init();
-			self.shareButton();
+			self.nextStepButton();
 
 		},
 
@@ -105,117 +104,6 @@
 			},
 
 		},
-
-
-		/**
-		**	Form
-		**/
-
-		contactForm: {
-
-			init: function(){
-
-				var self = this;
-
-				self.cF = $('.contactform');
-
-
-				self.cF.on("submit", { obj: this }, self.eventHandler);
-
-			},
-
-			eventHandler: function(event){
-
-				event.preventDefault();
-
-				var self = event.data.obj,
-				$this = $(this);
-
-				if(!self.clientValidation($this) || self.cF.hasClass('informed')){
-
-					return false;
-				};
-
-				$.ajax({
-					url: 'php/contact-send.php', 
-					type: 'post',
-					data: $this.serialize(),
-					success: function(data){
-
-						var type = data.indexOf("success") != -1 ? 'success' : 'error';
-						self.showMessage(data, type);
-
-					}
-				});
-
-			},
-
-			clientValidation: function(form){
-
-				var self = this,
-				collection = form.find('[required]'),
-				minCCollection = form.find('[data-min-characters]'),
-				message = "";
-
-				collection.each(function(i, el){
-
-					if($(el).val() == ""){
-
-						message += "All required fields must be filled! <br>";
-						return false;
-
-					}
-
-				});
-
-				minCCollection.each(function(i, el){
-
-					message += self.minCharacters($(el));
-
-				});
-
-				if(message !== "" && !form.hasClass('informed')){
-
-					self.showMessage(message, 'error');
-
-				}
-
-				return message === "";
-			},
-
-			minCharacters: function(el){
-
-				var amount = el.data('min-characters');
-
-				return el.val().length < amount ? '"'+el.data('field-name') + '"  field should contain minimum '+amount+' characters!' + "<br>" : "";
-
-			},
-
-			showMessage: function(data, type){
-
-				var template = $("<div class='alert_box t_hide "+type+"'><p>"+data+"</p></div>"),
-				f = this.cF;
-
-				if(type === "success") f.find('input, textarea').val("");
-
-				f.addClass('informed');
-
-				template.appendTo(f).slideDown(function(){
-
-					$(this)
-					.delay(4000)
-					.slideUp(function(){
-
-						f.removeClass('informed');
-						$(this).remove();
-
-					});
-
-				});
-
-			},
-
-   		},
 
 
 		/**
@@ -336,10 +224,10 @@
 		
 
 		/**
-		**	Share button
+		**	Next step button
 		**/
 
-		shareButton: function(){
+		nextStepButton: function(){
 
 			$('.social_list').on('click','a',function(){
 
@@ -347,18 +235,18 @@
 
 			});
 
-			$('.next_step').on('click',function(){
+			$('.step_1').on('click','.next_step', function(){
+
+				$('#contactForm').submit();
+
+			});
+
+			$('.step_2').on('click', '.next_step', function(){
 
 				if(!$(this).hasClass('active')) return;
-
-				$('.get_tickets_list').find('li.current').addClass('done').removeClass('current').next().addClass('current');
-
-				$('.step_2').animate({
-					'opacity': 0
-				},500,function(){
-					$('.step_2').removeClass('current').next().addClass('current').delay(500).animate({
-						'opacity':1
-					});
+				
+				$('.step_2').next().addClass('current').delay(500).animate({
+					'opacity':1
 				});
 
 			});			

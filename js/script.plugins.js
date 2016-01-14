@@ -78,15 +78,15 @@
                	messages:{
 
                     cf_name:{
-                        required: "Это поле обязательно для заполнения",
+                        required: "Обязательно для заполнения",
                     },
 
                     cf_fname:{
-                        required: "Это поле обязательно для заполнения",
+                        required: "Обязательно для заполнения",
                     },
 
                     cf_email:{
-                        required: "Это поле обязательно для заполнения",
+                        required: "Обязательно для заполнения",
                         email: "Ваш адрес электронной почты неверен!"
                     },
 
@@ -100,6 +100,16 @@
                         success: function(data) { 
                         	
                         	console.log(data);
+
+							$('.get_tickets_list').find('li.current').addClass('done').removeClass('current').next().addClass('current');
+
+							$('.step_1').animate({
+								'opacity': 0
+							},500,function(){
+								$('.step_1').removeClass('current').next().addClass('current').delay(500).animate({
+									'opacity':1
+								});
+							});
 
                         } 
 
