@@ -82,7 +82,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: url(../images/Page1.svg) 50% 100% no-repeat;
+        background: url(../images/Page1.svg) 50% 50% no-repeat;
     }
 
     *{
