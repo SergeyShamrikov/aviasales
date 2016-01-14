@@ -64,13 +64,25 @@
     1. Default stylesheets
 
 ------------------------------------------------ */
+    html,body{height: 100%;}
 
     body {
         font-family: 'latosemibold_italic', sans-serif;
         color:#505050;
         font-size:16px;
         line-height:20px;
-        background:#cfcec7;
+        background: #cfcec7;
+    }
+
+    #background{
+        position: absolute;
+        opacity: 0.5;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url(../images/Page1.svg) 50% 100% no-repeat;
     }
 
     *{
@@ -693,13 +705,15 @@
     
     #pilot_img{
         float: left;
-        width: 208px;
-        margin: 0 91px 0 38px;
+        width: 337px;
+        margin: 0;
+        text-align: center;
     }
 
     .advice_box{
         float: left;
         width: 507px;
+        padding-top: 80px;
         text-align: center;
     }
 
@@ -768,6 +782,11 @@
         line-height: 18px;
         letter-spacing: 0.4px;
         margin-bottom: 21px;
+    }
+
+    .advice_title{
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 /* ------------------------------------------------
 
