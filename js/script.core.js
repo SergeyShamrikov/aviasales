@@ -48,7 +48,21 @@
 					self.w = $(window);
 					self.windowHeight = self.w.height();
 
-			    $("#content").innerHeight(self.windowHeight);
+				if(self.w.width() > 767){
+
+			    	$("#content").innerHeight(self.windowHeight);
+
+				}
+				else{
+
+					$("#content").css({
+
+						'height': 'auto'
+
+					});					
+
+				}
+
 
 			}
 

@@ -1,13 +1,278 @@
 /*==================================RESPONSIVE LAYOUTS===============================================*/
-@media only screen and (max-width: 992px) {
- body{min-width:768px;}
+@media only screen and (max-width: 950px){
+ 	
+ 	.container{
+ 		width: 750px;
+ 	}
+
+ 	.first_screen p{
+ 		padding: 0 105px;
+ 	}
+
+ 	#pilot_img{
+ 		width: 250px;
+ 	}
+
+ 	.advice_box{
+ 		width: 500px;
+ 	}
+
+ 	#pilot_img img{
+ 		max-width: 100%;
+ 	}
 
 }
 
 @media only screen and (max-width: 767px) {
- body{min-width:420px;}
+	
+	.container{
+ 		width: auto;
+ 		padding: 0 15px;
+ 	}
+
+ 	.inner_page #header{
+ 		display: none;
+ 	}
+
+ 	#header{
+ 		position: static;
+ 		padding-top: 10px;
+ 	}
+
+ 	.logo a{
+ 		width: 130px;
+ 		height: 31px;
+ 	}
+
+ 	.logo2 a{
+ 		width: 108px;
+ 		height: 25px;
+ 	}
+	
+	#content{
+		padding: 24px 0 30px;
+	}
+
+	#footer{
+		position: static;
+		padding-bottom: 17px;
+	}
+
+ 	h1, h2, h3, h4, h5, h6{
+ 		margin-bottom: 20px;
+ 	}
+
+ 	h1{
+		font-size: 34px;
+		line-height: 40px;
+ 	}
+
+ 	h2{
+ 		font-size: 26px;
+ 		line-height: 32px;
+ 	}
+	
+
+	/*terms conditions modal*/
+
+	#terms_conditions{
+		width: 450px;
+	}
+
+	.custom_scrollbar{
+		padding: 40px 18px 12px;
+	}
+
+	.arcticmodal-container_i2{
+		padding: 10px;
+	}
+
+	/*inner page*/
+
+	#pilot_img{
+		width: 200px;
+		float: none;
+		position: absolute;
+		left: 50%;
+		top: 10px;
+		margin-left: -100px;
+	}
+
+	.advice_box{
+		width: auto;
+		float: none;
+		padding-top: 160px;
+	}
+
+	.advice_title{
+		top: 15px;
+	}
+
+	.advice_btn_box{
+		bottom: 15px;
+	}
+
+	.advice_item{
+		padding: 40px;
+	}
+
+	.advice{
+		height: 200px;
+	}
+
+
 }
 
 @media only screen and (max-width: 479px) {
- body{min-width:300px;}
+	
+	body{min-width:300px;}
+	
+	.inner_page #content{
+		padding-bottom: 10px;
+	}
+
+	.first_screen p{
+		padding: 0;
+		margin-bottom: 35px;
+	}
+
+	.btn{
+		width: 100%;
+	}
+	
+	/*terms conditions modal*/
+
+	#terms_conditions{
+		width: 290px;
+	}
+
+	/*inner page*/
+	
+	.advice{
+		height: 234px;
+		margin-bottom: 20px;
+	}
+
+	..win_tickets:not(:last-child){
+		margin-bottom: 14px;
+	}
+
+	.advice_item{
+		padding: 10px 15px 40px;
+	}
+
+	.advice_title{
+		display: none;
+	}
+
+	/*get tickets modal*/
+
+	#get_tickets{
+		width: 290px;
+		padding: 34px 21px 17px;
+	}
+
+	#get_tickets h2{
+		text-align: left;
+		font-size: 20px;
+		letter-spacing: 0.6px;
+		margin-bottom: 18px;
+	}
+
+	.get_tickets_list li{
+		font-size: 16px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+	}
+
+	.get_tickets_list:not(:last-child){
+		margin-bottom: 27px;
+	}
+
+	.get_tickets_list li:after{
+		height: 15px;
+		background-position: 0 0;
+	}
+
+	.input_half{
+		width: 100%;
+	}
+
+	.input_half:not(:last-child){
+		margin-bottom: 10px;
+	}
+
+	.input_box:not(:last-child){
+		margin-bottom: 10px;
+	}
+
+	.input_box input{
+		padding: 9px 13px 10px;
+	}
+
+	.social_list{
+		margin: 0;
+		height: 60px;
+		text-align: justify;
+	}
+
+	.social_list:after{
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+
+	.social_list:not(:last-child){
+		margin-bottom: 26px;
+	}
+
+	.social_list li{
+		float: none;
+		width: auto;
+		display: inline-block;
+		padding: 0;
+	}
+
+	.social_list li a{
+		font-size: 0;
+		padding: 0;
+		height: 60px;
+	}
+
+	.social_list li a:before{
+		content: '';
+		display: block;
+		width: 60px;
+		height: 60px;
+	}
+
+	.social_list li a.fb:before{
+		background: url(../images/fb_.svg) 50% 50% no-repeat;
+	}
+
+	.social_list li a.vk:before{
+		background: url(../images/vk_.svg) 50% 50% no-repeat;
+	}
+
+	.social_list li a.tw:before{
+		background: url(../images/tw_.svg) 50% 50% no-repeat;
+	}
+
+	.step_3{
+		top: 34px;
+		left: 21px;
+		right: 21px;
+		bottom: 0;
+	}
+
+	#get_tickets .step_3 h2{
+		text-align: center;
+	}
+
+	.ready_img span{
+		width: 90px;
+		height: 90px;
+		margin-bottom: 20px;
+	}
+
 }

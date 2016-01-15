@@ -1,7 +1,5 @@
 ;(function($){
 
-	"use strict";
-
 	$(document).ready(function(){
 
 		/* ------------------------------------------------
@@ -16,19 +14,37 @@
 				$(modal).arcticmodal({
 					
 					afterOpen: function(){
-						var wHeight = $(window).height();
 
-						$(modal).css({
-							'max-height': wHeight*0.75
-						});
+						if($('#terms_conditions').length){
+
+							modalHeight();
+
+							$(window).on('resize',modalHeight);
+							
+							function modalHeight(){
+
+								var wHeight = $(window).height();
+
+								$('#terms_conditions').css({
+									'height': wHeight*0.75
+								});
+							
+							}
+						
+						}
 
 					},
 
 					afterClose: function(){
 
-						$(modal).css({
-							'min-height': "auto"
-						});
+						if($('#terms_conditions').length){
+
+							$('#terms_conditions').css({
+								'height': "auto"
+							});
+							
+						}
+
 					}
 
 				});
@@ -57,66 +73,70 @@
                 validate
         ------------------------------------------------ */
 
-            $("#contactForm").validate({
+            if($("#contactForm").length){
 
-               	rules:{
+	            $("#contactForm").validate({
 
-                    cf_name:{
-                        required: true,
-                    },
+	               	rules:{
 
-                    cf_fname:{
-                        required: true,
-                    },
+	                    cf_name:{
+	                        required: true,
+	                    },
 
-                    cf_email:{
-                        required: true,
-                        email:true,
-                    },
-               	},
+	                    cf_fname:{
+	                        required: true,
+	                    },
 
-               	messages:{
+	                    cf_email:{
+	                        required: true,
+	                        email:true,
+	                    },
+	               	},
 
-                    cf_name:{
-                        required: "Обязательно для заполнения",
-                    },
+	               	messages:{
 
-                    cf_fname:{
-                        required: "Обязательно для заполнения",
-                    },
+	                    cf_name:{
+	                        required: "Обязательно для заполнения",
+	                    },
 
-                    cf_email:{
-                        required: "Обязательно для заполнения",
-                        email: "Ваш адрес электронной почты неверен!"
-                    },
+	                    cf_fname:{
+	                        required: "Обязательно для заполнения",
+	                    },
 
-               	},
+	                    cf_email:{
+	                        required: "Обязательно для заполнения",
+	                        email: "Ваш адрес электронной почты неверен!"
+	                    },
 
-               	submitHandler: function(form) {
-                    
-                    $(form).ajaxSubmit({
-                        type: 'post', 
-                        url:  'php/contact-send.php',
-                        success: function(data) { 
-                        	
-                        	console.log(data);
+	               	},
 
-							$('.get_tickets_list').find('li.current').addClass('done').removeClass('current').next().addClass('current');
+	               	submitHandler: function(form) {
+	                    
+	                    $(form).ajaxSubmit({
+	                        type: 'post', 
+	                        url:  'php/contact-send.php',
+	                        success: function(data) { 
+	                        	
+	                        	console.log(data);
 
-							$('.step_1').animate({
-								'opacity': 0
-							},500,function(){
-								$('.step_1').removeClass('current').next().addClass('current').delay(500).animate({
-									'opacity':1
+								$('.get_tickets_list').find('li.current').addClass('done').removeClass('current').next().addClass('current');
+
+								$('.step_1').animate({
+									'opacity': 0
+								},500,function(){
+									$('.step_1').removeClass('current').next().addClass('current').delay(500).animate({
+										'opacity':1
+									});
 								});
-							});
 
-                        } 
+	                        } 
 
-                    });
-                }
+	                    });
+	                }
 
-            });
+	            });
+
+            }
 
         /* ------------------------------------------------
                 End of validate
