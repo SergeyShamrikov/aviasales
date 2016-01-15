@@ -1,4 +1,26 @@
 /*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 1024px) and (min-width: 951px){
+	
+	#pilot_img{
+		margin-top: 0;
+	}
+
+	.advice_box{
+		padding-top: 95px;
+	}
+
+	.plane_box{
+		width: 100%;
+		margin-left: 60px;
+	}
+
+	.left_w,.right_w{
+		background: none;
+	}
+
+
+}
+
 @media only screen and (max-width: 950px){
  	
  	.container{
@@ -10,7 +32,14 @@
  	}
 
  	#pilot_img{
- 		width: 250px;
+ 		width: 380px;
+ 		padding-bottom: 48px;
+ 		margin-top: -15px;
+ 		padding-left: 130px;
+ 		margin-left: -130px;
+ 		-webkit-background-size: contain;
+        background-size: contain;
+ 		background-position: -32px 100%;
  	}
 
  	.advice_box{
@@ -20,6 +49,14 @@
  	#pilot_img img{
  		max-width: 100%;
  	}
+
+	.advice{
+		height: 290px;
+	}
+
+	.left_w,.right_w{
+		background: none;
+	}
 
 }
 
@@ -96,6 +133,9 @@
 		left: 50%;
 		top: 10px;
 		margin-left: -100px;
+		background: none;
+		padding-left: 0;
+		margin-top: 0;
 	}
 
 	.advice_box{
@@ -118,6 +158,10 @@
 
 	.advice{
 		height: 200px;
+		background: #fff;
+		-webkit-box-shadow: 0 3px 0 #8e7878;
+		box-shadow: 0 3px 0 #8e7878;
+		border-radius: 6px;
 	}
 
 

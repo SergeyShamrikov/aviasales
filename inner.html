@@ -20,6 +20,8 @@
         ============================================ -->
         <link rel="stylesheet" href="plugins/arcticmodal/jquery.arcticmodal-0.3.css">
         <link rel="stylesheet" href="plugins/custom-scrollbar/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="plugins/datepicker/jquery-ui.min.css">
+        <link rel="stylesheet" href="plugins/datepicker/jquery-ui.theme.min.css">
         
 
         <!-- Favicon
@@ -54,7 +56,12 @@
 
     <body class="inner_page">
 
-        <div id="background"></div>
+        <div id="background">
+            
+            <div class="left_w"></div>
+            <div class="right_w"></div>
+
+        </div>
 
         <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
 
@@ -104,7 +111,7 @@
                 
                 <div class="container">
                     
-                    <div class="clearfix">
+                    <div class="plane_box">
 
                         <div id="pilot_img">
 
@@ -312,12 +319,18 @@
 
                             <div class="input_box">
 
-                                <div class="input_whole">
+                                <div class="input_half">
 
                                     <input id="email" type="email" placeholder='E-mail' required name="cf_email">
 
                                 </div>
 
+                                <div class="input_half">
+                                    
+                                    <input type="text" id="datepicker" placeholder='Дата рождения' required name="cf_date">
+
+                                </div>
+                        
                             </div>
 
                         </form>
@@ -393,6 +406,7 @@
         <script type="text/javascript" src="plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script type="text/javascript" src="plugins/jquery.validate/jquery.validate.min.js"></script>
         <script type="text/javascript" src="plugins/jquery.validate/jquery.form.js"></script>
+        <script type="text/javascript" src="plugins/datepicker/jquery-ui.min.js"></script>
 
         <!-- Theme files
         ============================================ -->

@@ -85,8 +85,30 @@
         background: url(../images/Page1.svg) 50% 50% no-repeat;
     }
 
+    .inner_page{
+        background-color: #E3EBEC;
+    }
+
     .inner_page #background{
-        background: url(../images/Page2.svg) 50% 50% no-repeat;
+        background: #E3EBEC;
+        opacity: 1;
+    }
+
+    .left_w,.right_w{
+        position: absolute;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        background-image: url(../images/window_.svg);
+        background-repeat: repeat-x;
+        background-position: 120% 50%;
+        left: 0;
+    }
+
+    .right_w{
+        left: auto;
+        right: 0;
+        background-position: 0 50%;
     }
 
     *{
@@ -721,12 +743,27 @@
     8. Inner page
 
 ------------------------------------------------ */
+
+    .plane_box{
+        background: #E3EBEC;
+    }
+
+    .plane_box:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
     
     #pilot_img{
         float: left;
-        width: 337px;
+        width: 537px;
         margin: 0;
+        padding-left: 160px;
+        margin-left: -160px;
         text-align: center;
+        background: url(../images/door_.svg) 0 100% no-repeat;
+        padding-bottom: 58px;
+        margin-top: -60px;
     }
 
     .advice_box{
@@ -738,19 +775,18 @@
 
     .advice{
         overflow: hidden;
-        background-color: #fff;
-        border-radius: 6px;
-        -webkit-box-shadow: 0 3px 0 #8e7878;
-        box-shadow: 0 3px 0 #8e7878;
+        background: url(../images/table_.svg) 0 0 no-repeat;
+        -webkit-background-size: contain;
+        background-size: contain;
         position: relative;
-        height: 266px;
+        height: 302px;
         margin-bottom: 23px;
     }
 
     .advice_btn_box{
         position: absolute;
         z-index: 9;
-        bottom: 28px;
+        bottom: 37px;
         left: 0;
         right: 0;
     } 
@@ -786,7 +822,7 @@
     .advice_item{
         display: none;
         vertical-align: middle;
-        padding: 60px 57px;
+        padding: 84px 57px 69px;
         max-height: 100%;
         width: 100%;
         font-family: 'latomedium_italic', sans-serif;
@@ -807,7 +843,7 @@
 
     .advice_title{
         position: absolute;
-        top: 28px;
+        top: 54px;
         left: 0;
         right: 0;
         font-size: 16px;
