@@ -23,7 +23,7 @@
 			self.contentHeight.init();
 			setTimeout(function(){
 
-				// self.preloader.load();
+				self.preloader.load();
 			
 			},2500);
 
