@@ -21,7 +21,7 @@
 			self.contentHeight.init();
 			setTimeout(function(){
 
-				self.preloader();
+				// self.preloader();
 			
 			},2500);
 
