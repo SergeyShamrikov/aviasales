@@ -380,14 +380,14 @@
           60% {
             width: 2vh;
             height: 2vh;
-            -webkit-transform: translate(-150%, -50%);
-                    transform: translate(-150%, -50%);
+            -webkit-transform: translate(-100%, -50%);
+                    transform: translate(-100%, -50%);
           }
           90% {
             width: 2vh;
             height: 2vh;
-            -webkit-transform: translate(-150%, -50%);
-                    transform: translate(-150%, -50%);
+            -webkit-transform: translate(-100%, -50%);
+                    transform: translate(-100%, -50%);
           }
           100% {
             width: 5vh;
