@@ -85,14 +85,14 @@
 						
 						'opacity': 0
 					
-					},1000, function(){
+					},800, function(){
 						
 						advice.removeClass('active');
 						nextAdvice.addClass('active').delay(200).animate({
 
 							'opacity': 1							
 
-						},1000);
+						},800);
 
 					});
 
@@ -100,13 +100,13 @@
 
 						'opacity':0
 
-					},1000, function(){
+					},800, function(){
 
 						pilot.attr('src', src).delay(200).animate({
 
 							'opacity':1
 
-						},1000,function(){
+						},800,function(){
 
 							self.adviceClick = false;
 						
