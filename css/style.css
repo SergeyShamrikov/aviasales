@@ -846,7 +846,6 @@
 
     .advice_item.active{
         display: inline-block;
-        opacity: 1;
     }
 
     .win_tickets{

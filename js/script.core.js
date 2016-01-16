@@ -66,6 +66,10 @@
 				var self = this;
 				self.adviceClick = false;
 
+				$('.advice_item.active').css({
+					'opacity':1
+				})
+
 				$('.advice_btn').on('click', function(){
 
 					if(self.adviceClick) return;
@@ -81,18 +85,14 @@
 						
 						'opacity': 0
 					
-					},500, function(){
+					},1000, function(){
 						
 						advice.removeClass('active');
-						nextAdvice.addClass('active').animate({
+						nextAdvice.addClass('active').delay(200).animate({
 
 							'opacity': 1							
 
-						},500,function(){
-
-							self.adviceClick = false;
-							
-						});
+						},1000);
 
 					});
 
@@ -100,13 +100,17 @@
 
 						'opacity':0
 
-					},500, function(){
+					},1000, function(){
 
-						pilot.attr('src', src).animate({
+						pilot.attr('src', src).delay(200).animate({
 
 							'opacity':1
 
-						},500);
+						},1000,function(){
+
+							self.adviceClick = false;
+						
+						});
 
 					});					
 
