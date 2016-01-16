@@ -365,36 +365,60 @@
           }
         }
 
+
+        @keyframes leftEyeAnimation {
+          0% {
+            width: 5vh;
+            height: 5vh;
+            transform: translate(-50%, -50%);
+          }
+          50% {
+            width: 5vh;
+            height: 5vh;
+            transform: translate(-50%, -50%);
+          }
+          60% {
+            width: 2vh;
+            height: 2vh;
+            transform: translate(-150%, -50%);
+          }
+          90% {
+            width: 2vh;
+            height: 2vh;
+            transform: translate(-150%, -50%);
+          }
+          100% {
+            width: 5vh;
+            height: 5vh;
+            transform: translate(-50%, -50%);
+          }
+        }
+
         @-webkit-keyframes leftEyeAnimation {
           0% {
             width: 5vh;
             height: 5vh;
             -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
           }
           50% {
             width: 5vh;
             height: 5vh;
             -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
           }
           60% {
             width: 2vh;
             height: 2vh;
             -webkit-transform: translate(-150%, -50%);
-                    transform: translate(-150%, -50%);
           }
           90% {
             width: 2vh;
             height: 2vh;
             -webkit-transform: translate(-150%, -50%);
-                    transform: translate(-150%, -50%);
           }
           100% {
             width: 5vh;
             height: 5vh;
             -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
           }
         }
 
@@ -482,33 +506,8 @@
           }
         }
         
-        @keyframes leftEyeAnimation {
-          0% {
-            width: 5vh;
-            height: 5vh;
-            transform: translate(-50%, -50%);
-          }
-          50% {
-            width: 5vh;
-            height: 5vh;
-            transform: translate(-50%, -50%);
-          }
-          60% {
-            width: 2vh;
-            height: 2vh;
-            transform: translate(-150%, -50%);
-          }
-          90% {
-            width: 2vh;
-            height: 2vh;
-            transform: translate(-150%, -50%);
-          }
-          100% {
-            width: 5vh;
-            height: 5vh;
-            transform: translate(-50%, -50%);
-          }
-        }
+
+
 
         @-webkit-keyframes rightEyeAnimation {
           0% {
@@ -560,6 +559,7 @@
                     transform: translate(-50%, -50%);
           }
         }
+
         @keyframes rightEyeAnimation {
           0% {
             width: 5vh;
