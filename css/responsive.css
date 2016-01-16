@@ -6,7 +6,7 @@
 	}
 
 	.advice_box{
-		padding-top: 95px;
+		padding-top: 55px;
 	}
 
 	.plane_box{
@@ -14,8 +14,20 @@
 		margin-left: 60px;
 	}
 
-	.left_w,.right_w{
-		background: none;
+	h1{
+		margin-bottom: 20px;
+	}
+
+	.mb37:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	.first_screen p{
+		margin-bottom: 30px;
+	}
+
+	#content_inner{
+		padding-bottom: 360px;
 	}
 
 
@@ -26,9 +38,14 @@
  	.container{
  		width: 750px;
  	}
-
+	
  	.first_screen p{
  		padding: 0 105px;
+ 	}
+
+ 	#content_inner{
+ 		padding-top: 160px;
+ 		padding-bottom: 360px;
  	}
 
  	#pilot_img{
@@ -51,11 +68,14 @@
  	}
 
 	.advice{
-		height: 290px;
+		height: 316px;
+		margin-left: -31px;
+		padding-left: 31px;
 	}
-
-	.left_w,.right_w{
-		background: none;
+	
+	.advice_btn_box,
+	.advice_title{
+		left: 31px;
 	}
 
 }
@@ -65,6 +85,12 @@
 	.container{
  		width: auto;
  		padding: 0 15px;
+ 	}
+
+ 	#content_inner{
+ 		background: none;
+ 		padding-top: 0;
+ 		padding-bottom: 0;
  	}
 
  	.inner_page #header{
@@ -91,8 +117,15 @@
 	}
 
 	#footer{
-		position: static;
-		padding-bottom: 17px;
+		padding-bottom: 5px;
+	}
+	
+	.first_screen{
+		padding-top: 10 0px;
+	}
+
+	.mb37:not(:last-child){
+		margin-bottom: 15px;
 	}
 
  	h1, h2, h3, h4, h5, h6{
@@ -157,8 +190,8 @@
 	}
 
 	.advice{
+		background: #fff url() 0 0 no-repeat;
 		height: 200px;
-		background: #fff;
 		-webkit-box-shadow: 0 3px 0 #8e7878;
 		box-shadow: 0 3px 0 #8e7878;
 		border-radius: 6px;
@@ -211,7 +244,8 @@
 
 	/*get tickets modal*/
 
-	#get_tickets{
+	#get_tickets,
+	#ready{
 		width: 290px;
 		padding: 34px 21px 17px;
 	}
@@ -302,21 +336,17 @@
 		background: url(../images/tw_.svg) 50% 50% no-repeat;
 	}
 
-	.step_3{
-		top: 34px;
-		left: 21px;
-		right: 21px;
-		bottom: 0;
-	}
-
-	#get_tickets .step_3 h2{
+	#ready .step_3 h2{
 		text-align: center;
 	}
 
-	.ready_img span{
-		width: 90px;
-		height: 90px;
+	.ready_img{
 		margin-bottom: 20px;
+	}
+
+	.ready_img img{
+		width: 90px;
+		height: auto;
 	}
 
 }

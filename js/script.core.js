@@ -77,7 +77,14 @@
 
 			adviceChange: function(){
 
+				var self = this;
+				self.adviceClick = false;
+
 				$('.advice_btn').on('click', function(){
+
+					if(self.adviceClick) return;
+
+					self.adviceClick = true;
 
 					var pilot = $('#pilot_img').find('img'),
 						advice = $('.advice_item.active'),
@@ -95,6 +102,10 @@
 
 							'opacity': 1							
 
+						},500,function(){
+
+							self.adviceClick = false;
+							
 						});
 
 					});
@@ -109,7 +120,7 @@
 
 							'opacity':1
 
-						});
+						},500);
 
 					});					
 
@@ -259,10 +270,6 @@
 
 				if(!$(this).hasClass('active')) return;
 				
-				$('.step_2').next().addClass('current').delay(500).animate({
-					'opacity':1
-				});
-
 			});			
 
 		},

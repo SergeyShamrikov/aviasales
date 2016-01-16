@@ -37,12 +37,27 @@
 
 					afterClose: function(){
 
-						if($('#terms_conditions').length){
+						if(modal === '#terms_conditions'){
 
 							$('#terms_conditions').css({
 								'height': "auto"
 							});
 							
+						}
+
+						if(modal === "#get_tickets"){
+
+							$('.get_tickets_list').find('li').removeClass('done current');
+							$('.get_tickets_list').find('li:first-child').addClass('current');
+
+							$(modal).find('.step_2').removeClass('current').css({
+								'opacity':0
+							});
+
+							$(modal).find('.step_1').addClass('current').css({
+								'opacity':1
+							});
+
 						}
 
 					}
@@ -125,7 +140,7 @@
 	                        url:  'php/contact-send.php',
 	                        success: function(data) { 
 	                        	
-	                        	console.log(data);
+	                        	// console.log(data);
 
 								$('.get_tickets_list').find('li.current').addClass('done').removeClass('current').next().addClass('current');
 

@@ -71,18 +71,17 @@
         color:#505050;
         font-size:16px;
         line-height:20px;
-        background: #cfcec7;
+        background: #BCE4F0;
     }
 
     #background{
         position: absolute;
-        opacity: 0.5;
+        opacity: 1;
         z-index: -1;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: url(../images/Page1.svg) 50% 50% no-repeat;
     }
 
     .inner_page{
@@ -257,7 +256,16 @@
         display: inline-block;
         width: 100%;
         vertical-align: middle;
+        padding-bottom: 320px;
+        background: url(../images/main_bgd_.svg) 50% 100% no-repeat;
     }
+
+
+    .inner_page #content_inner{
+        padding-bottom: 0;
+        background: none;
+    }
+
 
   /* --------------------------------------------
         3.1. Offsets
@@ -293,8 +301,8 @@
         }
 
         h1{
-            font-size: 44px; 
-            line-height: 52px;
+            font-size: 60px; 
+            line-height: 60px;
             letter-spacing: 1.4px;
         }
         
@@ -540,7 +548,8 @@
 
     /*Get Tickets*/
 
-    #get_tickets{
+    #get_tickets,
+    #ready{
         width: 507px;
         padding: 39px 35px 40px 32px;
     }
@@ -717,21 +726,12 @@
     /*step 3*/
 
     .step_3{
-        position: absolute;
-        top: 39px;
-        bottom: 40px;
-        right: 35px;
-        left: 32px;
-        background-color: #fff;
+        display: block;
+        opacity: 1;
         text-align: center;
     }
 
-    .ready_img span{
-        display: inline-block;
-        background: #d8d8d8;
-        width: 162px;
-        height: 162px;
-        border-radius: 50%;
+    .ready_img{
         margin-bottom: 33px;
     }
 
@@ -745,7 +745,7 @@
 ------------------------------------------------ */
 
     .plane_box{
-        background: #E3EBEC;
+        /*background: #E3EBEC;*/
     }
 
     .plane_box:after{
@@ -769,25 +769,26 @@
     .advice_box{
         float: left;
         width: 507px;
-        padding-top: 35px;
         text-align: center;
     }
 
     .advice{
         overflow: hidden;
-        background: url(../images/table_.svg) 0 0 no-repeat;
+        background: url(../images/bubble.svg) 0 0 no-repeat;
         -webkit-background-size: contain;
         background-size: contain;
         position: relative;
-        height: 302px;
+        height: 332px;
         margin-bottom: 23px;
+        margin-left: -52px;
+        padding-left: 52px;
     }
 
     .advice_btn_box{
         position: absolute;
         z-index: 9;
         bottom: 37px;
-        left: 0;
+        left: 52px;
         right: 0;
     } 
 
@@ -844,7 +845,7 @@
     .advice_title{
         position: absolute;
         top: 54px;
-        left: 0;
+        left: 52px;
         right: 0;
         font-size: 16px;
         letter-spacing: 1.4px;
