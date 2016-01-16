@@ -19,6 +19,11 @@
 			var self = this;
 
 			self.contentHeight.init();
+			setTimeout(function(){
+
+				self.preloader();
+			
+			},2500);
 
 		},
 
@@ -265,6 +270,26 @@
 		},
 
 
+		/**
+		**	Preloader
+		**/
+
+		preloader: function(){
+
+			$('#preloader').animate({
+
+				'opacity': 0
+
+			},1000,function(){
+
+				$('#preloader').css({
+
+					'visibility': 'hidden'
+
+				});
+
+			});
+		},
 
 	}
 
