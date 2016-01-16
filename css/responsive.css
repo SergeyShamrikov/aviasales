@@ -91,6 +91,10 @@
  	#content_inner{
  		background: none;
  		padding-top: 0;
+ 		padding-bottom: 40px;
+ 	}
+
+ 	.inner_page #content_inner{
  		padding-bottom: 0;
  	}
 
