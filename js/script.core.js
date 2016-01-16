@@ -11,6 +11,8 @@
 			self.events.adviceChange();
 			// self.subscribeForm.init();
 			self.nextStepButton();
+			
+			self.preloader.init();
 
 		},
 
@@ -21,7 +23,7 @@
 			self.contentHeight.init();
 			setTimeout(function(){
 
-				// self.preloader();
+				// self.preloader.load();
 			
 			},2500);
 
@@ -274,22 +276,41 @@
 		**	Preloader
 		**/
 
-		preloader: function(){
+		preloader: {
 
-			$('#preloader').animate({
+			init: function(){
 
-				'opacity': 0
+				if(device.ios()){
 
-			},1000,function(){
+					$('.leftEye1').css({
+						"display": 'block'
+					});	
 
-				$('#preloader').css({
+					$('.leftEye').css({
+						"display": 'none'
+					});	
 
-					'visibility': 'hidden'
+				}
+			},
+
+			load: function(){
+
+				$('#preloader').animate({
+
+					'opacity': 0
+
+				},1000,function(){
+
+					$('#preloader').css({
+
+						'visibility': 'hidden'
+
+					});
 
 				});
 
-			});
-		},
+			}
+		}
 
 	}
 
