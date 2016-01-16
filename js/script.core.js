@@ -12,7 +12,7 @@
 			// self.subscribeForm.init();
 			self.nextStepButton();
 			
-			self.preloader.init();
+			// self.preloader.init();
 
 		},
 
