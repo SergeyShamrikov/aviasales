@@ -65,6 +65,7 @@
 
  	#pilot_img img{
  		max-width: 100%;
+ 		vertical-align: top;
  	}
 
 	.advice{
@@ -164,11 +165,14 @@
 		float: none;
 		position: absolute;
 		left: 50%;
-		top: 10px;
+		top: 0;
 		margin-left: -100px;
 		background: none;
 		padding-left: 0;
 		margin-top: 0;
+		padding: 0;
+		height: 390px;
+		overflow: hidden;
 	}
 
 	.advice_box{
@@ -178,11 +182,11 @@
 	}
 
 	.advice_title{
-		top: 15px;
+		top: 40px;
 	}
 
 	.advice_btn_box{
-		bottom: 15px;
+		bottom: 20px;
 	}
 
 	.advice_item{
@@ -190,11 +194,15 @@
 	}
 
 	.advice{
-		background: #fff url() 0 0 no-repeat;
-		height: 200px;
-		-webkit-box-shadow: 0 3px 0 #8e7878;
-		box-shadow: 0 3px 0 #8e7878;
-		border-radius: 6px;
+		background-image: url(../images/bubble_mob.svg);
+		background-position: 50% 0;
+		height: 370px;
+		margin-left: 0;
+		padding: 0 100px;
+	}
+
+	.advice_btn_box, .advice_title{
+		left: 0;
 	}
 
 
@@ -205,7 +213,11 @@
 	body{min-width:300px;}
 	
 	.inner_page #content{
-		padding-bottom: 10px;
+		padding: 10px 0 0;
+	}
+
+	.plane_box{
+		padding: 10px 0;
 	}
 
 	.first_screen p{
@@ -226,8 +238,9 @@
 	/*inner page*/
 	
 	.advice{
-		height: 234px;
+		height: 226px;
 		margin-bottom: 20px;
+		padding: 0;
 	}
 
 	..win_tickets:not(:last-child){
@@ -235,7 +248,17 @@
 	}
 
 	.advice_item{
-		padding: 10px 15px 40px;
+		padding: 40px 15px;
+		font-size: 14px;
+		width: 290px;
+	}
+
+	.advice_btn{
+		font-size: 15px;
+	}
+
+	.advice_btn_box{
+		bottom: 17px;
 	}
 
 	.advice_title{
@@ -246,7 +269,7 @@
 
 	#get_tickets,
 	#ready{
-		width: 290px;
+		width: 100%;
 		padding: 34px 21px 17px;
 	}
 

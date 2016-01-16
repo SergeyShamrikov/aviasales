@@ -745,6 +745,7 @@
 ------------------------------------------------ */
 
     .plane_box{
+        position: relative;
         /*background: #E3EBEC;*/
     }
 
@@ -757,6 +758,7 @@
     #pilot_img{
         float: left;
         width: 537px;
+        height: 502px;
         margin: 0;
         padding-left: 160px;
         margin-left: -160px;
@@ -764,6 +766,18 @@
         background: url(../images/door_.svg) 0 100% no-repeat;
         padding-bottom: 58px;
         margin-top: -60px;
+    }
+
+    #pilot_img:before{
+        content: '';
+        display: inline-block;
+        vertical-align: bottom;
+        height: 100%;
+        margin-left: -5px;
+    }
+
+    #pilot_img img{
+        vertical-align: bottom;
     }
 
     .advice_box{
